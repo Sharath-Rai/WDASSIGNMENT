@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearby Live Event Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-calendar-alt"></i> Nearby Live Event Finder</h1>
+            <p>Discover exciting events happening around you!</p>
+        </header>
+
+        <div class="search-section">
+            <div class="location-input">
+                <label for="location">Enter your location:</label>
+                <input type="text" id="location" placeholder="City, State or Address">
+                <button id="getLocationBtn"><i class="fas fa-location-arrow"></i> Use Current Location</button>
+            </div>
+
+            <div class="search-options">
+                <label for="radius">Search Radius:</label>
+                <select id="radius">
+                    <option value="5">5 miles</option>
+                    <option value="10" selected>10 miles</option>
+                    <option value="25">25 miles</option>
+                    <option value="50">50 miles</option>
+                </select>
+
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option value="all">All Events</option>
+                    <option value="music">Music</option>
+                    <option value="sports">Sports</option>
+                    <option value="arts">Arts & Theater</option>
+                    <option value="family">Family</option>
+                    <option value="business">Business</option>
+                </select>
+
+                <label for="date">Date Range:</label>
+                <select id="date">
+                    <option value="today">Today</option>
+                    <option value="week" selected>This Week</option>
+                    <option value="month">This Month</option>
+                    <option value="all">All Upcoming</option>
+                </select>
+            </div>
+
+            <button id="searchBtn" class="search-button">Find Events</button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Searching for events...</p>
+        </div>
+
+        <div class="results-section" id="results">
+            <h2>Upcoming Events</h2>
+            <div class="events-container" id="eventsContainer">
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 Nearby Live Event Finder</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
